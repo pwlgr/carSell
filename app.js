@@ -6,17 +6,17 @@ const   express     = require('express'),
         app         = express();
 
 
-// var options ={
-//     useMongoClient: true
-// };
+var options ={
+    useMongoClient: true
+};
 
-// mongoose.Promise = global.Promise;
-// mongoose.Connect = global.Connect;
+mongoose.Promise = global.Promise;
+mongoose.Connect = global.Connect;
 
 // ------------APP CONFIG---------------
 
 // mongoose.connect("mongodb://localhost/car")  // mongoose connect
-mongoose.connect("mongodb://admin:admin@ds123799.mlab.com:23799/carsell")  // mongoose connect
+mongoose.connect("mongodb://admin:admin@ds123799.mlab.com:23799/carsell", options)  // mongoose connect
 
 app.use(parser.urlencoded({extended:true}));
 app.use(sanitizier());
