@@ -6,9 +6,9 @@ const   express     = require('express'),
         app         = express();
 
 
-var options ={
-    useMongoClient: true
-};
+// var options ={
+//     useMongoClient: true
+// };
 
 mongoose.Promise = global.Promise;
 mongoose.Connect = global.Connect;
