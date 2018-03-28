@@ -136,7 +136,7 @@ app.delete("/cars/:id", (req,res) => {
     })
 })
 
-app.listen(3001, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log("sellCar app is running")
 })
 
