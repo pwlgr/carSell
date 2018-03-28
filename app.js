@@ -136,7 +136,7 @@ app.delete("/cars/:id", (req,res) => {
     })
 })
 
-app.listen(3001, 'localhost', () => {
+app.listen(3001, () => {
     console.log("sellCar app is running")
 })
 
