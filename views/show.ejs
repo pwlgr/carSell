@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div class="show">
+    <div><img src="<%= car.image %>" alt=""></div>
+    <p><b>Make:</b> <%= car.make %> </p>
+    <p><b>Model:</b> <%= car.model %> </p>
+    <p><b>Year:</b> <%= car.year %></p>
+    <p><b>Price:</b> $<%= car.price %></p>
+    <p><b>Seller's informations:</b> <%= car.description %></p>
+    <div class="showBtns">
+        <form id="delete" action="/cars/<%= car._id %>?_method=DELETE" method="POST">
+            <button class="deleteBtn">Delete</button>
+        </form>
+        <form id="edit" action="/cars/show/<%= car._id %>/edit" method="GET">
+            <button class="editBtn">Edit</button>
+        </form>
+    </div>
+   
+</div>
+<% include ./partials/footer %>

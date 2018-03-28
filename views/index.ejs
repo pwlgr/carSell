@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<div class="allOffers">
+<% cars.forEach((car) => { %>
+    <div class="offer">
+        <div><img class="offerImage" src="<%= car.image %>" ></div>
+        <div class="car">
+            <h1><%= car.make %> <%= car.model %></h1>
+            <h5><%= car.year %></h5>
+            <h5>$<%= car.price %></h5>
+            <h6>Added: <%= car.made.toGMTString() %></h6>
+            <!-- <h6>Type: <%= car.carType %></h6> -->
+            <h2><a href="/cars/show/<%= car._id %>">More info.</a></h2>
+        </div>
+    </div>
+    
+        
+<% }) %>
+</div>
+
+<% include ./partials/footer %>

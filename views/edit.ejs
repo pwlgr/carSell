@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+<div class="form">
+    <form action="/cars/show/<%= car._id %>/?_method=PUT" method="POST">
+        <input type="text" name="car[make]" value="<%= car.make %>">
+        <input type="text" name="car[model]" value="<%= car.model %>">
+        <input type="text" name="car[image]" value="<%= car.image %>">
+        <input type="number" name="car[year]" value="<%= car.year %>">
+        <input type="number" name="car[price]" value="<%= car.price %>">
+        <input type="text" name="car[description]" value="<%= car.description %>">
+        <!-- <select>
+            <option name="car[carType]">Used</option>
+            <option name="car[carType]">New</option>
+        </select> -->
+        <input id="submitBtn" type="submit" value="Submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>
