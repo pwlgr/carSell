@@ -10,8 +10,8 @@ const   express     = require('express'),
 //     useMongoClient: true
 // };
 
-mongoose.Promise = global.Promise;
-mongoose.Connect = global.Connect;
+// mongoose.Promise = global.Promise;
+// mongoose.Connect = global.Connect;
 
 // ------------APP CONFIG---------------
 
