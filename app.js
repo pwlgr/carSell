@@ -15,7 +15,9 @@ mongoose.Connect = global.Connect;
 
 // ------------APP CONFIG---------------
 
-mongoose.connect("mongodb://localhost/car")  // mongoose connect
+// mongoose.connect("mongodb://localhost/car")  // mongoose connect
+mongoose.connect("mongodb://admin:admin@ds123799.mlab.com:23799/carsell")  // mongoose connect
+
 app.use(parser.urlencoded({extended:true}));
 app.use(sanitizier());
 app.set('view engine', 'ejs') // so there is no need to write .ejs in template extension
